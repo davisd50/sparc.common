@@ -26,6 +26,8 @@ setup(name='sparc.common',
           'setuptools',
           'zope.interface',
           'zope.component',
+          'zope.configuration',
+          'zope.security'
           # -*- Extra requirements: -*-
       ],
       entry_points="""

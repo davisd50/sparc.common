@@ -5,7 +5,7 @@ version = '0.0.1'
 
 setup(name='sparc.common',
       version=version,
-      description="",
+      description="Common utilities used within SPARC platform",
       long_description=open("README.md").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
@@ -13,11 +13,12 @@ setup(name='sparc.common',
       classifiers=[
         "Programming Language :: Python",
         ],
-      keywords='',
-      author='',
-      author_email='',
+      keywords=['zca'],
+      author='David Davis',
+      author_email='davisd50@gmail.com',
       url='https://github.com/davisd50/sparc.common',
-      license='GNU public',
+      download_url = '',
+      license='MIT',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['sparc'],
       include_package_data=True,
@@ -27,7 +28,8 @@ setup(name='sparc.common',
           'zope.interface',
           'zope.component',
           'zope.configuration',
-          'zope.security'
+          'zope.security',
+          'zope.i18nmessageid'
           # -*- Extra requirements: -*-
       ],
       entry_points="""

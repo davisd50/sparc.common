@@ -7,7 +7,7 @@ top-level logger for all sub-packages and modules).  This will allow for dynamic
 logging and debugging capabilities.
     
 Typical Usage:
-    >>> import sparc.log
+    >>> import sparc.common.log
     >>> import logging
     >>>
     >>> logger = logging.getLogger('sparc.myModule')

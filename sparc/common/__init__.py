@@ -1,2 +1,6 @@
-from sparc.common.configure import Configure
-from sparc.common.configure import ConfigurationRequired
+from interfaces import ICallable
+from configure import Configure
+from configure import ConfigurationRequired
+
+from zope.i18nmessageid import MessageFactory
+SPARCMessageFactory = MessageFactory('sparc.common')

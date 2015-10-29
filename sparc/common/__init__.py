@@ -1,3 +1,4 @@
+from interfaces import IIdentified
 from interfaces import ICallable
 from configure import Configure
 from configure import ConfigurationRequired

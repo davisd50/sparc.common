@@ -45,6 +45,7 @@ def Configure(packages = None):
     packages = [
                  (zope.component, 'meta.zcml'),
                  (zope.security, 'meta.zcml'),
+                 (zope.component, 'configure.zcml')
                  ] + packages
     for config in packages:
         try:

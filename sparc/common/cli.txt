@@ -17,7 +17,7 @@ A named utility is exposed that simplifies the process of retrieving
 information from a person executing a command line application.
 
     >>> import sparc.common
-    >>> from sparc.common import Configure
+    >>> from sparc.configuration.zcml import Configure
     >>> from sparc.common import ICallable
     >>> from zope.component import getUtility
     >>> Configure([sparc.common])

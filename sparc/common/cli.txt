@@ -17,19 +17,18 @@ A named utility is exposed that simplifies the process of retrieving
 information from a person executing a command line application.
 
     >>> import sparc.common
-    >>> from sparc.configuration.zcml import Configure
+    >>> import sparc.common.cli
     >>> from sparc.common import ICallable
     >>> from zope.component import getUtility
-    >>> Configure([sparc.common])
     
     Now we need to overwrite the 'sparc.common.cli_selected_choice' utility
     with our test implementation.
     
-    >>> from zope.component import getGlobalSiteManager
-    >>> gsm = getGlobalSiteManager()
-    >>> gsm.unregisterUtility(component=sparc.common.cli.cliSelectedChoice, provided=ISelectedChoice, name=u'sparc.common.cli_selected_choice')
+    >>> from zope.component import getSiteManager
+    >>> sm = getSiteManager()
+    >>> sm.unregisterUtility(component=sparc.common.cli.cliSelectedChoice, provided=ISelectedChoice, name=u'sparc.common.cli_selected_choice')
     True
-    >>> gsm.registerUtility(testSelectedChoice, ISelectedChoice, u'sparc.common.cli_selected_choice')
+    >>> sm.registerUtility(testSelectedChoice, ISelectedChoice, u'sparc.common.cli_selected_choice')
     
     Now we can test our utility
     
